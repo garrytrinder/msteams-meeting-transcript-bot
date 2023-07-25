@@ -14,16 +14,26 @@ provision:
     writeToEnvironmentFile: 
       teamsAppId: TEAMS_APP_ID
 
-  # Create or reuse an existing Azure Active Directory application for bot.
-  - uses: botAadApp/create
+  - uses: aadApp/create
     with:
-      # The Azure Active Directory application's display name
       name: msteams-meeting-transcript-bot-${{TEAMSFX_ENV}}
+      generateClientSecret: true
+      signInAudience: "AzureADMultipleOrgs"
     writeToEnvironmentFile:
-      # The Azure Active Directory application's client id created for bot.
-      botId: BOT_ID
-      # The Azure Active Directory application's client secret created for bot.
-      botPassword: SECRET_BOT_PASSWORD 
+      clientId: BOT_ID
+      objectId: BOT_OBJECT_ID
+      clientSecret: SECRET_BOT_PASSWORD
+  
+  # # Create or reuse an existing Azure Active Directory application for bot.
+  # - uses: botAadApp/create
+  #   with:
+  #     # The Azure Active Directory application's display name
+  #     name: msteams-meeting-transcript-bot-${{TEAMSFX_ENV}}
+  #   writeToEnvironmentFile:
+  #     # The Azure Active Directory application's client id created for bot.
+  #     botId: BOT_ID
+  #     # The Azure Active Directory application's client secret created for bot.
+  #     botPassword: SECRET_BOT_PASSWORD
 
   # Create or update the bot registration on dev.botframework.com
   - uses: botFramework/create
@@ -34,6 +44,11 @@ provision:
       description: ""
       channels:
         - name: msteams
+
+  - uses: aadApp/update
+    with:
+      manifestPath: ./aad.manifest.json
+      outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
 
   # Validate using manifest schema
   - uses: teamsApp/validateManifest

@@ -1,0 +1,73 @@
+{
+	"id": "${{BOT_OBJECT_ID}}",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": 2,
+	"addIns": [],
+	"allowPublicClient": null,
+	"appId": "${{BOT_ID}}",
+	"appRoles": [],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2023-07-24T09:18:56Z",
+	"description": null,
+	"certification": null,
+	"disabledByMicrosoftStatus": null,
+	"groupMembershipClaims": null,
+	"identifierUris": [],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "msteams-meeting-transcript-bot-local",
+	"notes": null,
+	"oauth2AllowIdTokenImplicitFlow": false,
+	"oauth2AllowImplicitFlow": false,
+	"oauth2Permissions": [],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2025-07-24T09:18:57.3691723Z",
+			"keyId": "f98ddb11-b0aa-42ff-8a7f-fbe1ea9c8caa",
+			"startDate": "2023-07-24T09:18:57.3691723Z",
+			"value": null,
+			"createdOn": "2023-07-24T09:18:57.4751807Z",
+			"hint": ".rj",
+			"displayName": "default"
+		}
+	],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "6plbfs.onmicrosoft.com",
+	"replyUrlsWithType": [],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "00000003-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "c1684f21-1984-47fa-9d61-2dc8c296bb70",
+					"type": "Role"
+				},
+				{
+					"id": "a4a80d8d-d283-4bd8-8504-555ec3870630",
+					"type": "Role"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": null,
+	"signInAudience": "AzureADMultipleOrgs",
+	"tags": [],
+	"tokenEncryptionKeyId": null
+}
