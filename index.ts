@@ -68,3 +68,11 @@ server.post("/api/messages", async (req, res) => {
     await bot.run(context);
   });
 });
+
+// serve files from the tab directory
+server.get(
+  "/*",
+  restify.plugins.serveStatic({
+    directory: `${__dirname}/tab`,
+  })
+);

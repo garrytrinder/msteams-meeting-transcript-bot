@@ -36,7 +36,18 @@
         }
     ],
     "composeExtensions": [],
-    "configurableTabs": [],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://${{BOT_DOMAIN}}/config.html",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "groupchat"
+            ],
+            "context": [
+                "meetingDetailsTab"
+            ]
+        }
+    ],
     "staticTabs": [],
     "permissions": [
         "identity",
